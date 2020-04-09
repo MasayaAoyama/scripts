@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $(dirname $0)
+
 if [ ! -f /usr/local/bin/kind ]; then
   KIND_VERSION=v0.7.0
   curl -Lo ./kind "https://github.com/kubernetes-sigs/kind/releases/download/${KIND_VERSION}/kind-$(uname)-amd64"
